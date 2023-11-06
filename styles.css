@@ -1,11 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
 *{
-    background-color: red;
+    list-style: none;
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+    padding: 0;
 }
 
-ul li{
+header {
+    background-color: #fff;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.color-secundario-h1 {
+    color: pink;
+}
+
+h1, ul li, .bx {
     color: turquoise;
 }
 
-.bx {
-    color: #fff;
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    margin: 0 10px 0 10px;
 }
+  
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: turquoise;
+    margin: 3px 0;
+    border-radius: 50px;
+}
+  
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.nav-menu li {
+    font-weight: 400;
+    margin: 0 5px 0 5px;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+  
+.nav-menu li:hover {
+    color: pink;
+    transition: all .3s linear;
+}
+
+.iconos .bx {
+    font-size: 25px;
+    margin: 0 5px 0 5px;
+}
+
+img {
+    width: 100%;
+}
+
+.regalo {
+    background-color: pink;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50px;
+    font-weight: 200;
+}
+
+.regalo .bx {
+    color: #fff;
+    font-size: 40px;
+}
+
+.regalo p {
+    font-size: 20px;
+    font-weight: 200;
+    margin-left: 10px;
+}
+
+.bocadillo {
+    background-color: pink;
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.bocadillo .bx {
+    color: #fff;
+    font-size: 40px;
+}
+
+.bocadillo p {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 0;
+
+    background-color: red;
+    color: #fff;
+
+    border-radius: 50px;
+    width: 25px;
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        background-color: coral;
+    }
+}
+
+@media (max-width: 768px) {
+.menu-toggle {
+      display: flex;
+}
+  
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-menu.show {
+      display: flex;  
+      position: absolute;
+      transform: translate(-40%, 10%);
+      padding: 15px;
+      border-radius: 0 0 15px 15px;
+      background-color: #fff;
+    }
+
+  }
